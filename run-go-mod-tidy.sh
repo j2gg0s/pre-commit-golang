@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if go mod tidy -v 2>&1 | grep -q 'updates to go.mod needed'; then
+if go mod tidy -v $@ 2>&1 | grep -q 'updates to go.mod needed'; then
     exit 1
 fi
 
